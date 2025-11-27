@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login - Pink Love Site</title>
+<title>Login - To Our online Diary</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="login-container">
     <h1>Open mo Bebi💖</h1>
-    <h3>❤️password-ilovemyjaijai❤️</h3>
+    <h3>❤️password-ilovemybebi❤️</h3>
     <p>Enter the password to enter:</p>
     <input type="password" id="password" placeholder="Password">
     <br>
@@ -20,7 +20,7 @@
 function checkPassword() {
     const password = document.getElementById('password').value;
     const container = document.querySelector('.login-container');
-    if(password === 'ilovemyjaijai') {
+    if(password === 'ilovemybebi') {
         container.style.transition = 'all 0.5s ease';
         container.style.opacity = '0';
         setTimeout(() => window.location.href = 'main.html', 500);
@@ -33,3 +33,4 @@ function checkPassword() {
 </script>
 </body>
 </html>
+
