@@ -60,7 +60,7 @@ body {
 }
 
 /* MOBILE VERSION */
-@media (max-width: 390px) {
+@media (max-width: 420px) {
 
     /* show hamburger */
     .nav-toggle {
@@ -493,4 +493,5 @@ section {
     from { opacity: 0; transform: scale(0.95); }
     to   { opacity: 1; transform: scale(1); }
 }
+
 
