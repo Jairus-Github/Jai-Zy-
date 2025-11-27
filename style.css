@@ -55,7 +55,7 @@ body {
 
 .nav-toggle .bar {
     width: 26px;
-    height: 10px;
+    height: 3px;
     background-color: white;
     border-radius: 2px;
 }
@@ -513,6 +513,7 @@ section {
 body, html {
     overflow-x: hidden;
 }
+
 
 
 
