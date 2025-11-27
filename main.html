@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pink Love Site</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+
+    <div class="nav-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <div class="nav-links" id="nav-links">
+        <a href="#songpage">Songpage</a>
+        <a href="#letters">Letters</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#photoalbum">Album</a>
+        <a href="index.html">Out</a>
+    </div>
+</nav>
+
+<section id="home">
+    <h1>Home 💕</h1>
+    <div class="home-content">
+        <div class="photo-container">
+            <img id="couple-photo" src="assets/ugh.jpg" alt="Us" onclick="showHeart()">
+            <div id="heart-animation" style="display:none;">❤️</div>
+        </div>
+        <div class="letter">
+            <h2>A Letter for You</h2>
+            <p id="home-letter">My dearest love,<br><br>
+            Every moment with you is a treasure. Your smile lights up my world, and I can't imagine life without you. You are my everything.<br><br>
+            Forever yours,<br>Your Love</p>
+        </div>
+    </div>
+</section>
+
+<section id="songpage">
+    <div class="playlist-header">
+        <img src="assets/jz.jpg" alt="Playlist Cover">
+        <div class="playlist-info">
+            <p class="public">Public Playlist</p>
+            <h1>Jai & Zy ♡</h1>
+            <p class="details">zy & jiu <br>·1 save <br>·24 songs,<br>2 hr 15 min</p>
+        </div>
+    </div>
+
+    <div class="song-search-container">
+        <input type="text" id="song-search" placeholder="Search songs..." onkeyup="filterSongs()">
+    </div>
+
+    <div class="songs" id="songs-list">
+        <div class="song"><span class="track-number">1</span> <h3>Stand By Me - Ben E. King</h3><audio controls><source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav"></audio></div>
+        <div class="song"><span class="track-number">2</span> <h3>Can't Help Falling in Love - Elvis Presley</h3><audio controls><source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav"></audio></div>
+        <div class="song"><span class="track-number">3</span> <h3>Perfect - Ed Sheeran</h3><audio controls><source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav"></audio></div>
+        <!-- continue for all 24 songs -->
+    </div>
+</section>
+
+
+<section id="letters">
+    <h1>Letters 💌</h1>
+    <input type="text" id="letter-search" placeholder="Search letters..." onkeyup="filterLetters()">
+    <div class="letter-buttons">
+        <!-- 24 letter buttons -->
+        <script>
+        for(let i=1;i<=24;i++){
+            document.write(`<button onclick="showLetter(${i})">Letter ${i}</button>`);
+        }
+        </script>
+    </div>
+    <div id="letter-display"></div>
+</section>
+
+<section id="quiz">
+    <h1>Quiz ❓</h1>
+    <p style="margin-left: 15%;font-size: 30px;">Lab mo ba ako?🥺</p>
+    <button id="yes-btn" onclick="yesClicked()">Yes</button>
+    <button id="no-btn" onclick="noClicked()">No</button>
+    <div id="quiz-result"></div>
+</section>
+
+<section id="photoalbum">
+    <h1>Photo Album natin Bebi💖📸</h1>
+
+    <div class="photo-grid">
+        <img src="assets/p1.png" onclick="openPhoto(this.src)">
+        <img src="assets/p1.png" onclick="openPhoto(this.src)">
+        <img src="assets/p1.png" onclick="openPhoto(this.src)">
+        <img src="assets/p1.png" onclick="openPhoto(this.src)">
+        <img src="assets/p1.png" onclick="openPhoto(this.src)">
+        <img src="assets/p1.png" onclick="openPhoto(this.src)">
+        <!-- Add as many photos as you want -->
+    </div>
+
+    <!-- Lightbox popup -->
+    <div id="photo-viewer" onclick="closePhoto()">
+        <img id="viewer-img">
+    </div>
+</section>
+
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Pink Love Site</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="login-container">
+    <h1>Open mo Bebi💖</h1>
+    <h3>❤️password-ilovemyjaijai❤️</h3>
+    <p>Enter the password to enter:</p>
+    <input type="password" id="password" placeholder="Password">
+    <br>
+    <button onclick="checkPassword()">Login</button>
+</div>
+
+<script>
+function checkPassword() {
+    const password = document.getElementById('password').value;
+    const container = document.querySelector('.login-container');
+    if(password === 'ilovemyjaijai') {
+        container.style.transition = 'all 0.5s ease';
+        container.style.opacity = '0';
+        setTimeout(() => window.location.href = 'main.html', 500);
+    } else {
+        container.classList.add('shake');
+        setTimeout(() => container.classList.remove('shake'), 500);
+        alert('Wrong password! Try again.');
+    }
+}
+</script>
+</body>
+</html>
