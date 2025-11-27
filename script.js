@@ -41,7 +41,7 @@ function yesClicked() {
     const quizResult = document.getElementById('quiz-result');
     // Create the image
     const img = document.createElement('img');
-    img.src = "assets/yay.png";
+    img.src = "yay.png";
     img.alt = "Love Photo";
     img.style.borderRadius = '15px';
     img.style.maxWidth = '300px';
@@ -90,3 +90,4 @@ function openPhoto(src) {
 function closePhoto() {
     document.getElementById("photo-viewer").style.display = "none";
 }
+
