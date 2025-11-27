@@ -57,7 +57,7 @@ function yesClicked() {
 function noClicked() {
     noClicks++;
     const noBtn = document.getElementById('no-btn');
-    if (noClicks < 3) {
+    if (noClicks < 5) {
         const randomX = Math.random() * 200 - 100;
         const randomY = Math.random() * 200 - 100;
         noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
@@ -90,4 +90,5 @@ function openPhoto(src) {
 function closePhoto() {
     document.getElementById("photo-viewer").style.display = "none";
 }
+
 
