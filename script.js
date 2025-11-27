@@ -7,13 +7,133 @@ function showHeart() {
 
 // Letters: Show typed letters
 function showLetter(num) {
-    const letters = [];
-    for(let i=1;i<=24;i++){
-        letters.push(`Letter ${i}: My love, this is a heartfelt message just for you. You are amazing and I cherish every moment with you.`);
-    }
-    document.getElementById('letter-display').innerHTML = `<p>${letters[num-1]}</p>`;
+    const letters = [
+`Thank you for loving me in ways I did not know I deserved.
+You hold my heart gently even on days I can barely hold myself.
+Your love feels like a warm light in places I thought would stay dark.`,
+
+`I am sorry for the wounds I caused without meaning to.
+Sometimes my flaws speak louder than my intentions.
+Thank you for staying when walking away would have been easier.`,
+
+`With you everything feels softer.
+The world stops pressing down on me.
+You make even the chaos feel survivable.`,
+
+`Your achievements, your strength, your quiet victories,
+I see them all.
+And I am proud of you in ways words can barely contain.`,
+
+`You are the warmth in my cold days,
+the softness in my hard edges.
+You make my world feel kinder and fuller.`,
+
+`We have seen storms, silence, and sun.
+Yet you are still here.
+I am still holding your hand.
+That means everything to me.`,
+
+`I know I fall short.
+I know I stumble.
+But for you I will always rise again, trying to love better than yesterday.`,
+
+`The way you carry yourself,
+the fire in your heart,
+the tenderness in your soul
+you inspire me without even trying.`,
+
+`Not just your beauty,
+not just your laughter,
+but the kindness you carry so naturally.
+You are beautiful from the inside out.`,
+
+`When things were heavy,
+when everything felt fragile,
+you stayed.
+You fought for us.
+I will always be grateful for that.`,
+
+`I am still learning and still growing.
+But know this
+my heart is yours
+even when I do not show it perfectly.`,
+
+`On days when I am crumbling,
+I think of you
+and suddenly I can stand again.
+You give me a reason to keep going.`,
+
+`Watching you chase your dreams
+feels like watching the sunrise.
+I am proud, amazed, and forever inspired.`,
+
+`Home is not a place anymore.
+It is you.
+Your voice, your warmth, your presence.
+That is where my heart returns.`,
+
+`Our love is not flawless,
+but it is real and human.
+In its imperfect corners
+I find something worth holding forever.`,
+
+`You stayed when you could have walked away.
+You chose me even when I was not easy to choose.
+My heart will remember that for a lifetime.`,
+
+`Every laugh,
+every quiet moment,
+every small memory
+I carry them with me like treasures.`,
+
+`Your presence is a soft blanket
+over the cold parts of my life.
+You soothe me in ways nothing else can.`,
+
+`This love we built
+fragile and beautiful
+I will protect it with everything I have.
+I will protect you.`,
+
+`When the world feels heavy,
+thinking of you lifts me.
+You remind me to keep going,
+to keep fighting,
+to keep growing.`,
+
+`Your love is gentle but strong,
+soft but steady.
+It wraps around me like something sacred.`,
+
+`I imagine us years from now
+older, calmer, still choosing each other.
+That is the future I want.
+I want it with you.`,
+
+`If life throws storms at us,
+I will hold your hand tighter.
+We will walk through every disaster
+side by side.`,
+
+`You are the first thought in my mornings,
+the soft comfort in my nights,
+and the one I want in every chapter of my life.
+You are my world and my always.`
+    ];
+
+    document.getElementById('letter-display').innerHTML =
+        `<p>${letters[num-1].replace(/\n/g, '<br>')}</p>`;
 }
 
+function filterLetters() {
+    const input = document.getElementById('letter-search').value.toLowerCase();
+    const buttons = document.querySelectorAll('.letter-buttons button');
+
+    buttons.forEach(btn => {
+        const txt = btn.innerText.toLowerCase();
+        btn.style.display = txt.includes(input) ? 'inline-block' : 'none';
+    });
+}
 // Songs search
 function filterSongs() {
     const input = document.getElementById('song-search').value.toLowerCase();
@@ -90,5 +210,6 @@ function openPhoto(src) {
 function closePhoto() {
     document.getElementById("photo-viewer").style.display = "none";
 }
+
 
 
